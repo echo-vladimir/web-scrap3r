@@ -1,4 +1,5 @@
-# Web-Crawler
-## Web Scraper on Node.js
+# Web Scraper on Node.js
 
-[1.0.0] - Implementation using callbacks.
+###### log:
+[1.1.0] - Sequential execution | Reorganizing the hell of callbacks
+[1.0.0] - Sequential execution | Implementation using callbacks hell
