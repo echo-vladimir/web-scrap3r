@@ -1,0 +1,13 @@
+{
+  "name": "app-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "mkdirp": "^1.0.4",
+    "slug": "^5.2.0"
+  }
+}
