@@ -19,7 +19,6 @@ export default function scrape(url, nesting, cb) {
             if (err.code !== "ENOENT") {
                 return cb(err)
             }
-
             // The file doesn't exist
             return download(url, filename, (err, requestContent) => {
                 if (err) {
@@ -29,7 +28,6 @@ export default function scrape(url, nesting, cb) {
                 scrapeLinks(url, requestContent, nesting, cb)
             })
         }
-
         // The file already exists
         scrapeLinks(url, fileContent, nesting, cb)
     })
@@ -45,21 +43,28 @@ function scrapeLinks(currentUrl, body, nesting, cb) {
         process.nextTick(cb)
     }
 
-    (function iterate(index) {
-        if (index === links.length) {
-            return cb()
+    let completed = 0 
+    let hasErrors = false
+
+    function done(err) {
+        if (err) {
+            hasErrors = true
+            return cb(err)
         }
 
-        scrape(links[index], nesting - 1, (err) => {
-            if (err) {
-                return cb(err)
-            }
-            iterate(index + 1)
-        })
-    })(0)
+        if (++completed === links.length && !hasErrors) {
+            return cb()
+        }
+    }
+
+    links.forEach(link => {
+        scrape(link, nesting - 1, done)
+    })
+
 }
 
 function download(url, filename, cb) {
+    log(filename)
     axios.get(url).then(res => {
         log(`[Downloaded] - ${url}`)
         save(filename, res.data, err => {

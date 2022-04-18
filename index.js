@@ -10,5 +10,5 @@ scrape(url, nesting, err => {
     process.exit(1)
   }
 
-  log("Download complete")
+  log("[Download complete]")
 })
