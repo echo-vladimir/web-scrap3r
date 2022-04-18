@@ -12,7 +12,14 @@ global.log = console.log.bind(console, "[scrap3r]")
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
+const scraping = new Map()
 export default function scrape(url, nesting, cb) {
+    if (scraping.has(url)) {
+        return process.nextTick(callback)
+    }
+
+    scraping.set(url, true)
+
     const filename = urlToFilename(url)
     fs.readFile(filename, "utf8", (err, fileContent) => {
         if (err) {
@@ -43,7 +50,7 @@ function scrapeLinks(currentUrl, body, nesting, cb) {
         process.nextTick(cb)
     }
 
-    let completed = 0 
+    let completed = 0
     let hasErrors = false
 
     function done(err) {
@@ -64,7 +71,6 @@ function scrapeLinks(currentUrl, body, nesting, cb) {
 }
 
 function download(url, filename, cb) {
-    log(filename)
     axios.get(url).then(res => {
         log(`[Downloaded] - ${url}`)
         save(filename, res.data, err => {
