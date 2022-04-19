@@ -1,13 +1,19 @@
 # CLI Web-Scraper on Node.js
 
-* [3.0.1] - Unlimited parallel async execution using callbacks  
-    * Race condition fix.
-* [3.0.0] - Unlimited parallel async execution using callbacks  
-    * Added parallel crawling of links.  
-* [2.0.0] - Sequential recursive async execution using callbacks  
-    * Added recursive crawling of links on the page, and downloading them.
-    * Changing «CommonJS» to «ES Modules».
-* [1.1.0] - Sequential async execution using callbacks
-    * Reorganizing the hell of callbacks.
-* [1.0.0] - Sequential async execution using callbacks  
-    * Implementation using callbacks hell.
+[Russian](/README.RU.md)
+
+> Asynchronous flow control patterns with callbacks (CPS):
+* <code>[4.0.0] TODO - </code> Limited parallel async execution
+* <code>[3.0.2]</code> Limited parallel async execution
+    * Converted from functional style to object-oriented style 
+    * Added "RU" journaling
+* <code>[3.0.1]</code> Unlimited parallel async execution  
+    * Race condition fix
+* <code>[3.0.0]</code> Unlimited parallel async execution  
+    * Added parallel crawling of links
+* <code>[2.0.0]</code> Sequential recursive async execution  
+    * Added recursive crawling of links on the page, and downloading them
+    * Changing «CommonJS» to «ES Modules»
+* <code>[1.1.0]</code> Sequential async execution  
+    * Reorganizing the hell of callbacks
+* <code>[1.0.0]</code> Limited sequential async execution  

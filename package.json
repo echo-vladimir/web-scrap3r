@@ -1,13 +1,13 @@
 {
   "name": "web-scrap3r",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "",
   "main": "index.js",
   "author": "",
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "start": "nodemon ./index.js https://www.jaskolka.com/"
+    "start": "nodemon ./index.js https://www.jaskolka.com/ 1"
   },
   "dependencies": {
     "axios": "^0.26.1",
