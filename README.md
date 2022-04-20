@@ -1,4 +1,4 @@
 # CLI Web-Scraper on Node.js
 
-#### LOG FILES
+#### Changelog
 [Russian](/readMe/log.ru.md) | [English](/readMe/log.en.md)
