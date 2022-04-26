@@ -1,9 +1,7 @@
-"use strict";
-const crawler = require("./crawler");
-const log = console.log.bind(console, '>');
+import scrap3r from "./scrap3r/index.js"
 
-crawler.scrap(process.argv[2], (err, filename, downloaded) => {
-  if (err) return log(err);
-  if (downloaded) return log(`Completed the download of "${filename}."`);
-  return log(`"${filename}" was already downloaded.`);
-});
+const url = process.argv[2]
+
+scrap3r(url)
+  .then(() => log("💾 Complete"))
+  .catch(err => console.error(err))

@@ -1,12 +1,17 @@
 {
-  "name": "app-crawler",
-  "version": "1.1.0",
+  "name": "web-scrap3r",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "author": "",
   "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./index.js https://www.jaskolka.com/ 1"
+  },
   "dependencies": {
-    "axios": "^0.25.0",
+    "axios": "^0.27.1",
+    "cheerio": "^1.0.0-rc.10",
     "mkdirp": "^1.0.4",
     "slug": "^5.2.0"
   }
