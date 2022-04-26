@@ -1,4 +1,3 @@
-"use strict"
 import { URL } from "url"
 import path from "path"
 import * as cheerio from "cheerio"

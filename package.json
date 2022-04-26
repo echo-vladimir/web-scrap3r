@@ -1,6 +1,6 @@
 {
   "name": "web-scrap3r",
-  "version": "4.0.0",
+  "version": "0.5.0",
   "description": "",
   "main": "index.js",
   "author": "",
@@ -10,9 +10,9 @@
     "start": "nodemon ./index.js https://www.jaskolka.com/ 1"
   },
   "dependencies": {
-    "axios": "^0.26.1",
+    "axios": "^0.27.1",
     "cheerio": "^1.0.0-rc.10",
     "mkdirp": "^1.0.4",
-    "slug": "^5.3.0"
+    "slug": "^5.2.0"
   }
 }
