@@ -1,10 +1,9 @@
-# CLI Web-Scraper на Node.js
-
-[< Назад](../README.md) | [English](log.en.md)  
-
-> Управление асинхронным потоком с использованием спецификации Promises/A+
-
-<code>[5.0.0] TODO </code> Последовательное выполнение  
+<div align="center">
+<h1> CLI Web-Scraper на Node.js</h1>
+<h4> Changelog </h4>
+    <a href="https://github.com/echo-vladimir/web-scrap3r/blob/main/readMe/log.ru.md">Russian</a> | 
+    <a href="https://github.com/echo-vladimir/web-scrap3r/blob/main/readMe/log.en.md">English</a>
+</div>
 
 > Управление асинхронным потоком с использованием передачи продолжений (CPS)
 

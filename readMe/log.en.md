@@ -1,14 +1,12 @@
-# CLI Web-Scraper on Node.js
-
-[< Back](../README.md) | [Russian](log.ru.md)  
-
-> Asynchronous flow control with Promises/A+ specification
-
-<code>[5.0.0] TODO </code> Limited sequential execution   
+<div align="center">
+<h1> CLI Web-Scraper on Node.js</h1>
+<h4> Changelog </h4>
+    <a href="https://github.com/echo-vladimir/web-scrap3r/blob/main/readMe/log.ru.md">Russian</a> | 
+    <a href="https://github.com/echo-vladimir/web-scrap3r/blob/main/readMe/log.en.md">English</a>
+</div>
 
 > Asynchronous flow control with callbacks (CPS)  
-
-<code>[4.1.0] TODO </code> Promisify   
+ 
 <code>[4.0.0]</code> Limited parallel execution  
 <code>[3.0.2]</code> Object-oriented style  
 * Converted from functional style to object-oriented style  
