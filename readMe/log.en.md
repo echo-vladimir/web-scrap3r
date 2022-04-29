@@ -1,9 +1,7 @@
 <center>
 <h1> CLI Web-Scraper on Node.js</h1>
-Changelog:
-
-[log/ru](/readMe/log.ru.md) | 
-[log/en](/readMe/log.en.md)
+<h3>Changelog:</h3>
+</br>
 </center>
 
 > Asynchronous flow control with Promises/A+ specification  
@@ -16,6 +14,7 @@ Changelog:
  
 <code>[0.4.0]</code> Limited parallel execution  
 <code>[0.3.2]</code> Object-oriented style  
+
 * Converted from functional style to object-oriented style  
 * Added "RU" journaling  
 

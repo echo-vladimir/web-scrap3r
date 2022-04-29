@@ -1,5 +1,7 @@
 <center>
 <h1> CLI Web-Scraper on Node.js</h1>
+<h3>Changelog:</h3>
+</br>
 </center>
 
 > Управление асинхронным потоком с использованием спецификации Promises/A+  
