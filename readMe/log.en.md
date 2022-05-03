@@ -1,11 +1,12 @@
-<center>
+<div align="center">
 <h1> CLI Web-Scraper on Node.js</h1>
 <h3>Changelog:</h3>
 </br>
-</center>
+</div>
 
 > Asynchronous flow control with Promises/A+ specification  
 
+<code>[0.6.0]</code> Unlimited iterative sequential execution
 <code>[0.5.0]</code> Limited sequential execution  
 * Added Promisify
 * Changing the versioning order

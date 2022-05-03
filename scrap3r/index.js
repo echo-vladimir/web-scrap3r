@@ -11,15 +11,31 @@ global.log = console.log.bind(console, "[scrap3r]")
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-export default function scrape(url) {
+export default function scrape(url, nesting) {
     const filename = Link.urlToFilename(url)
-    return fsPromises.readFile(filename, 'utf8')
+    return fsPromises
+        .readFile(filename, 'utf8')
         .catch(err => {
             if (err.code !== 'ENOENT') {
                 throw err
             }
             return download(url, filename)
         })
+        .then(data => scrapeLinks(url, data, nesting))
+}
+
+function scrapeLinks(currentUrl, data, nesting) {
+    let promise = Promise.resolve()
+    if (nesting === 0) {
+        return promise
+    }
+
+    const links = Link.getPageLinks(currentUrl, data)
+    for (const link of links) {
+        promise = promise.then(() => scrape(link, nesting - 1))
+    }
+
+    return promise
 }
 
 function download(url, filename) {
@@ -34,7 +50,7 @@ function download(url, filename) {
         })
         .then(() => fsPromises.writeFile(path.resolve(dataPath, filename), data))
         .then(() => {
-            log(`💾 Saved ${url}`)
+            log(`💾 Saved - ${url}`)
             return data
         })
 }
