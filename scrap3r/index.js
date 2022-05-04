@@ -25,17 +25,14 @@ export default function scrape(url, nesting) {
 }
 
 function scrapeLinks(currentUrl, data, nesting) {
-    let promise = Promise.resolve()
     if (nesting === 0) {
-        return promise
+        return Promise.resolve() 
     }
 
     const links = Link.getPageLinks(currentUrl, data)
-    for (const link of links) {
-        promise = promise.then(() => scrape(link, nesting - 1))
-    }
+    const promises = links.map(link => scrape(link, nesting - 1))
 
-    return promise
+    return Promise.all(promises)
 }
 
 function download(url, filename) {
