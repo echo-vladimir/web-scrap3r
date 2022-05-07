@@ -6,11 +6,11 @@
 
 > Asynchronous flow control with Promises/A+ specification  
 
-<code>[0.7.0]</code> Unlimited parallel execution
-<code>[0.6.0]</code> Unlimited iterative sequential execution
+<code>[0.7.0]</code> Limited parallel execution  
+<code>[0.6.0]</code> Unlimited recursive sequential execution  
 <code>[0.5.0]</code> Limited sequential execution  
-* Added Promisify
-* Changing the versioning order
+* Added Promisify  
+* Changing the versioning order  
 
 > Asynchronous flow control with callbacks (CPS)  
  
